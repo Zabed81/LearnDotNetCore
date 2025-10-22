@@ -1,4 +1,5 @@
 ﻿
+
 namespace Mango.Web.Models
 {
     public class couponDto
@@ -8,9 +9,7 @@ namespace Mango.Web.Models
         public double DiscountAmount { get; set; }
         public int MinAmount { get; set; }
 
-        public static implicit operator string(couponDto v)
-        {
-            throw new NotImplementedException();
-        }
+       
+       
     }
 }

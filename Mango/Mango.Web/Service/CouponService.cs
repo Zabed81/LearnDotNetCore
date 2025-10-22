@@ -11,13 +11,12 @@ namespace Mango.Web.Service
         {
             _baseService = baseService;
         }
-
-        public async Task<ResponseDto?> CreateCouponsAsync(couponDto model)
+        public async Task<ResponseDto?> CreateCouponsAsync(couponDto c)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.POST,
-                Data = model,
+                Data = c,
                 Url = SD.CouponAPIBase + "/api/coupon"
             });
         }
@@ -69,4 +68,8 @@ namespace Mango.Web.Service
         }
     }
 }
-}
+
+
+
+
+
